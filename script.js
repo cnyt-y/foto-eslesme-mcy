@@ -23,21 +23,17 @@ let randomNum = function () {
         numberArray.push(i)
     }
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 8; i++) {
         let randomNumbers = Math.floor(Math.random() * 99)
         let num = numberArray[randomNumbers]
 
         randomArray.push(num, num)
-        num.splice(randomNumber, 1);
+        numberArray.splice(randomNumbers, 1);
     }
     return randomArray
 };
-/*
-Görev 2: Bu numaraları 1-99 arası(1 ve 99 dahil) sayılardan rastgele 4 çift oluşturacak şekilde üreten bir fonksiyon yazarak, kod bloğundaki array değerini bu fonksiyondan dönen array ile değiştiren kodları yazın
-*/
-const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
 
-
+const fotoNumaralari = randomNum();
 console.log(fotoNumaralari);
 
 for (fotoNumara of fotoNumaralari) {
@@ -100,14 +96,14 @@ function kartTiklama(olay) {
 
         puan++;
 
-        console.log(puan);
+        console.log("puanın:" + puan);
 
         puanText.innerHTML = puan;
 
         if (puan == 8) {
-            var congrats = document.createElement('img');
-            congrats.src = "https://media.giphy.com/media/26tk0jALFpsXmAF8c/giphy.gif"
-            imageShow = document.querySelector('body').appendChild(congrats);
+            let constract = document.createElement('img')
+            constract.src = "https://media.giphy.com/media/a0h7sAqON67nO/giphy.gif"
+            imageShow = document.querySelector('body').appendChild(constract);
             console.log("Tebrikler");
 
             setTimeout(function () {
